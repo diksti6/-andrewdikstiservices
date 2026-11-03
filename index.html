@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.gstatic.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://formsubmit.co https://*.googleapis.com https://*.firebaseio.com; img-src data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>@andrewdikstiservices — студия сайтов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--ink:#f6f0e8;--mut:#a89d90;--card:#151311;--line:#2e2924;--acc:#ff6a00;--sun:#ffb347;--onacc:#0a0a0a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+
+
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(26px,4vw,44px)}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;align-items:center;gap:20px;padding:12px clamp(16px,4vw,48px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font:700 16px Unbounded,sans-serif;text-decoration:none;margin-right:auto}
+nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--mut);font-weight:600;font-size:15px}nav a:hover{color:var(--ink)}
+.btn{border:0;border-radius:999px;padding:11px 22px;font-weight:700;background:var(--acc);color:var(--onacc);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--acc)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.big{padding:15px 30px;font-size:17px}
+@media(max-width:760px){nav{display:none}header .btn.ghost{display:none}}
+
+/* scroll stage */
+.stage{position:relative}
+.pin{position:relative;height:100svh;display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:20px;padding:70px clamp(16px,4vw,48px) 24px;overflow:hidden}
+.pin::before{content:"";position:absolute;width:60vmin;height:60vmin;right:8%;top:20%;background:radial-gradient(closest-side,color-mix(in srgb,var(--acc) 40%,transparent),transparent);filter:blur(30px);z-index:0}
+.copy{position:relative;z-index:1;max-width:520px}
+.copy h1{font-size:clamp(30px,4.6vw,58px)}
+.copy .lead{margin:18px 0 22px;color:var(--mut);max-width:440px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.caps{position:relative;margin-top:28px;height:96px;border-left:3px solid var(--acc);padding-left:16px}
+.cap{position:absolute;inset:0 0 auto 16px;opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s}
+.cap.on{opacity:1;transform:none}
+.cap b{font:700 18px Unbounded,sans-serif;display:block;margin-bottom:4px}
+.cap span{color:var(--mut);font-size:15px;display:block}
+.scene{position:relative;z-index:1;perspective:1500px;display:grid;place-items:center;height:100%;min-height:300px;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}.scene.grab{cursor:grabbing}
+.stack{position:relative;width:340px;height:215px;transform-style:preserve-3d;will-change:transform}
+.ly{position:absolute;inset:0;border-radius:14px;border:1px solid rgba(255,255,255,.3);overflow:hidden;box-shadow:0 30px 50px -30px rgba(0,0,0,.6);transition:opacity .3s}
+.tg{position:absolute;right:12px;top:10px;font:700 11px Manrope,sans-serif;color:#fff;background:rgba(0,0,0,.4);padding:3px 10px;border-radius:99px}
+.l0{background:#14110e;padding:44px 0 0}
+.l0 i{display:block;height:8px;border-radius:4px;margin:0 0 11px 18px;background:#ff6a00}
+.l0 i:nth-child(3n){background:#ffb347}.l0 i:nth-child(3n+1){background:#5a5146}
+.l1{background:#1d1814;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:44px 14px 14px}
+.l1 i{border:1.5px dashed rgba(255,255,255,.55);border-radius:8px}.l1 i:first-child{grid-column:span 3}
+.l2{background:linear-gradient(135deg,#ff6a00,#e03c00 55%,#ffb347)}
+.l2::before,.l2::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.28)}
+.l2::before{width:120px;height:120px;left:30px;top:60px}.l2::after{width:70px;height:70px;right:40px;top:40px;background:rgba(255,255,255,.4)}
+.l3{background:#f6efe4;padding:44px 18px 0}
+.l3 i{display:block;height:9px;border-radius:5px;background:#d9cdbb;margin-bottom:9px}.l3 i:nth-child(1){width:55%;background:#0a0a0a;height:12px}.l3 i:nth-child(3){width:80%}
+.l3 u{position:absolute;right:18px;bottom:18px;width:110px;height:70px;border-radius:10px;background:linear-gradient(135deg,#ffb347,#ff6a00)}
+.l4{background:#0a0a0a;color:#fff}
+.l4 .bar{height:26px;background:#26221d;display:flex;gap:5px;align-items:center;padding:0 10px}.l4 .bar s{width:8px;height:8px;border-radius:50%;background:#ff6b6b}.l4 .bar s+s{background:#ffb347}.l4 .bar s+s+s{background:#8a8074}
+.l4 h4{font:700 20px Unbounded,sans-serif;margin:30px 20px 8px;line-height:1.2}
+.l4 em{display:inline-block;font:700 12px Manrope;font-style:normal;margin:6px 20px;background:#ff6a00;color:#0a0a0a;padding:8px 18px;border-radius:99px}
+.hint{position:absolute;left:50%;bottom:14px;translate:-50% 0;font-size:13px;color:var(--mut);z-index:2;animation:bob 1.8s ease-in-out infinite;transition:opacity .3s}
+@keyframes bob{50%{transform:translateY(6px)}}
+@media(max-width:860px){.pin{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding-top:76px;gap:0}.copy .lead{display:none}.caps{margin-top:14px;height:84px}.cta{display:none}.stack{width:290px;height:183px}.copy h1{font-size:27px}}
+
+/* sections */
+section.s{padding:clamp(64px,10vw,120px) clamp(16px,4vw,48px);max-width:1180px;margin:0 auto}
+.sub{color:var(--mut);margin:12px 0 44px;max-width:560px}
+
+.chat{position:relative;max-width:760px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.chead{display:flex;gap:12px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.chead b{display:block}.chead small{color:var(--mut);font-size:13.5px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--acc);color:var(--onacc);display:grid;place-items:center;font:700 16px Unbounded,sans-serif}
+.msgs{height:min(420px,60svh);overflow:auto;padding:20px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:82%;padding:11px 15px;border-radius:18px;font-size:15.5px;line-height:1.5;overflow-wrap:anywhere;animation:rise .3s}
+.m.bot{background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.m.me{background:var(--acc);color:var(--onacc);border-bottom-right-radius:4px;align-self:flex-end}
+.m a.btn{display:inline-block;margin-top:10px;text-decoration:none;font-size:14px}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 14px}
+.chips button{border:1.5px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:8px 16px;font-size:14px;font-weight:600}
+.chips button:hover{border-color:var(--acc)}
+.cform{display:flex;gap:10px;padding:14px;border-top:1px solid var(--line)}
+.cform input{flex:1;min-width:0}
+.lock{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(6px)}
+.lock[hidden]{display:none}
+.lock b{font:700 20px Unbounded,sans-serif;line-height:1.25}.lock span{color:var(--mut);font-size:15px}
+.lock div{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+/* tracker */
+.track{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,5vw,64px);align-items:center}
+@media(max-width:820px){.track{grid-template-columns:1fr}}
+.order{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px clamp(18px,3vw,34px)}
+.ohead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:26px;font-weight:700}
+.ohead span{color:var(--mut);font-weight:600;font-size:14px}
+.steps{position:relative;display:grid;gap:26px;margin:0;padding:0;list-style:none}
+.steps::before,.steps::after{content:"";position:absolute;left:17px;top:18px;bottom:18px;width:3px;border-radius:3px;background:var(--line)}
+.steps::after{background:linear-gradient(var(--acc),var(--sun));transform-origin:top;transform:scaleY(var(--f,0));transition:transform .9s cubic-bezier(.6,0,.2,1)}
+.steps li{position:relative;display:grid;grid-template-columns:38px 1fr;gap:16px;z-index:1;opacity:.45;transition:opacity .5s}
+.steps li.act,.steps li.done{opacity:1}
+.dot{width:38px;height:38px;border-radius:50%;background:var(--card);border:3px solid var(--line);display:grid;place-items:center;font-size:16px;transition:background .4s,border-color .4s}
+.steps li.act .dot{border-color:var(--acc);animation:ring 1.4s infinite}
+.steps li.done .dot{background:var(--acc);border-color:var(--acc);color:var(--onacc)}
+.steps li.fin.done .dot{background:var(--sun);border-color:var(--sun);color:#0d1130;animation:pop .8s}
+@keyframes ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 60%,transparent)}100%{box-shadow:0 0 0 16px transparent}}
+@keyframes pop{30%{transform:scale(1.5) rotate(12deg)}}
+.steps b{display:block;font-size:17px}.steps span{color:var(--mut);font-size:14.5px;display:block}
+.again{margin-top:22px}
+
+/* auth */
+dialog{position:relative;max-height:calc(100svh - 24px);overflow:auto;border:1px solid #44352a;border-radius:26px;padding:0;width:min(460px,calc(100vw - 24px));background:radial-gradient(ellipse at 8% 0%,rgba(255,106,0,.15),transparent 42%),var(--card);color:var(--ink);box-shadow:0 40px 100px -30px rgba(0,0,0,.75)}
+dialog[open]{animation:in .35s cubic-bezier(.2,.9,.3,1.2)}
+dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(8px)}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.94)}}
+.dlg{padding:34px}
+.auth-mark{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:var(--acc);color:var(--onacc);font:700 20px Unbounded,sans-serif;box-shadow:0 10px 30px -12px var(--acc);margin-bottom:20px}
+.auth-title{font:700 clamp(22px,5vw,27px) Unbounded,sans-serif;line-height:1.2;margin:0 42px 9px 0}
+.auth-desc{color:var(--mut);font-size:14px;line-height:1.55;margin:0 0 23px;max-width:340px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:#0d0c0b;border:1px solid var(--line);border-radius:14px;padding:4px;margin-bottom:22px;gap:4px}
+.tabs button{border:0;background:none;color:var(--mut);padding:11px 8px;border-radius:10px;font-weight:700;transition:background .2s,color .2s}
+.tabs button[aria-selected="true"]{background:#332014;color:#ffb347;box-shadow:inset 0 0 0 1px rgba(255,106,0,.25)}
+form{display:grid;gap:14px}
+label{display:grid;gap:7px;font-size:13px;font-weight:700;color:#e9dfd4}
+input,select,textarea{font:inherit;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:#0d0c0b;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}input::placeholder{color:#756b61}
+input:focus,select:focus,textarea:focus{border-color:var(--acc);outline:none;box-shadow:0 0 0 3px rgba(255,106,0,.12)}textarea{resize:vertical;min-height:100px}
+.auth-submit{width:100%;margin-top:2px;padding:14px 18px}
+.auth-foot{color:var(--mut);font-size:12px;text-align:center;line-height:1.5;margin:15px 0 0}
+.x{position:absolute;right:17px;top:17px;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:#0d0c0b;font-size:22px;line-height:1;color:var(--mut);display:grid;place-items:center;transition:color .2s,border-color .2s}
+.x:hover{color:var(--ink);border-color:var(--acc)}
+.ok{text-align:center;padding:20px 0}.ok .big{font-size:54px}
+.err{color:#ff7777;font-size:13px;min-height:18px}
+@media(max-width:480px){.dlg{padding:28px 22px}.auth-desc{margin-bottom:18px}}
+footer{border-top:1px solid var(--line);padding:32px clamp(16px,4vw,48px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mut);font-size:14px}
+
+/* extra animation */
+.copy>*{animation:up .8s cubic-bezier(.2,.8,.2,1) both}.copy>*:nth-child(2){animation-delay:.12s}.copy>*:nth-child(3){animation-delay:.24s}.copy>*:nth-child(4){animation-delay:.36s}
+@keyframes up{from{opacity:0;transform:translateY(26px)}}
+.pin::before{animation:glow 7s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translate(-8vmin,6vmin) scale(1.25);opacity:.7}}
+.btn:not(.ghost){background:linear-gradient(110deg,var(--acc) 35%,var(--sun) 50%,var(--acc) 65%) 0 0/250% 100%;animation:shine 4.5s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.m.typing{display:flex;gap:5px;padding:14px 16px}.typing s{width:7px;height:7px;border-radius:50%;background:var(--mut);animation:dots 1s infinite}.typing s:nth-child(2){animation-delay:.15s}.typing s:nth-child(3){animation-delay:.3s}
+@keyframes dots{50%{transform:translateY(-5px);background:var(--acc)}}
+.ohead{align-items:center}
+.live{display:inline-flex;align-items:center;gap:8px;color:var(--sun);background:rgba(255,106,0,.12);border:1px solid rgba(255,106,0,.35);padding:5px 12px;border-radius:99px;font-size:13px;animation:rise .4s}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);animation:ring 1.2s infinite}
+.live.fin{color:#0a0a0a;background:var(--sun);border-color:var(--sun)}.live.fin::before{background:#0a0a0a;animation:none}
+.pbar{position:relative;height:8px;border-radius:99px;background:var(--line);margin:-8px 0 26px}
+.pbar i{position:absolute;inset:0 auto 0 0;width:0;border-radius:99px;background:linear-gradient(90deg,var(--acc),var(--sun));transition:width .9s cubic-bezier(.6,0,.2,1);overflow:hidden}
+.pbar i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-100%);animation:sweep 1.8s infinite}
+@keyframes sweep{to{transform:translateX(100%)}}
+.pbar em{position:absolute;right:0;top:12px;font:600 12px Manrope;font-style:normal;color:var(--mut)}
+.steps li.act b{color:var(--sun)}.steps li.act>div{animation:nudge 2s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.steps li.done .dot{animation:tick .5s}
+@keyframes tick{40%{transform:scale(1.25)}}
+.pnote{color:var(--mut);font-size:13.5px;margin-top:18px;min-height:20px}
+#adm{width:min(760px,calc(100vw - 24px))}
+.adm-h{display:flex;align-items:center;gap:12px;margin:0 44px 20px 0;flex-wrap:wrap}.adm-h h3{font-size:22px;margin-right:auto}
+.rq{border:1px solid var(--line);border-radius:16px;padding:16px;background:#0d0c0b;margin-bottom:12px;animation:rise .35s}
+.rq-t{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:700}.rq-t small{color:var(--mut);font-weight:600}
+.rq p{color:var(--mut);font-size:14.5px;margin:8px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.rq-b{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.rq-b select{flex:1;min-width:200px}
+.adm-empty{color:var(--mut);text-align:center;padding:30px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">@andrewdikstiservices</a>
+  <nav><a href="#how">Как мы работаем</a><a href="#chat">Чат с разработчиком</a><a href="#status">Статус заказа</a></nav>
+  <a class="btn" href="#chat" style="text-decoration:none">Написать</a>
+</header>
+
+<main id="top">
+<div class="stage" id="how">
+  <div class="pin">
+    <div class="copy">
+      <h1>Сайт, который собирается слой за слоем</h1>
+      <p class="lead">Смотрите, как из слоёв складывается готовый сайт: код, структура, дизайн, контент. Так же аккуратно мы делаем и ваш проект.</p>
+      <div class="cta"><a class="btn big" href="#chat" style="text-decoration:none">Заказать сайт</a></div>
+      <div class="caps" aria-live="polite">
+        <div class="cap on"><b>Фундамент</b><span>Чистый код, быстрая загрузка и надёжный хостинг.</span></div>
+        <div class="cap"><b>Структура</b><span>Продумываем, где что лежит, чтобы клиент сразу находил нужное.</span></div>
+        <div class="cap"><b>Дизайн</b><span>Цвета, шрифты и стиль под ваш бренд, без шаблонов.</span></div>
+        <div class="cap"><b>Контент</b><span>Тексты, фото и кнопки, которые подводят к заявке.</span></div>
+        <div class="cap"><b>Анимации</b><span>Плавное движение, которое оживляет страницу.</span></div>
+        <div class="cap"><b>Готово</b><span>Сайт открывается на телефоне и компьютере. Можно принимать клиентов.</span></div>
+      </div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <div class="stack">
+        <div class="ly l0"><b class="tg">Код</b><i style="width:60%"></i><i style="width:40%"></i><i style="width:72%"></i><i style="width:30%"></i><i style="width:55%"></i><i style="width:66%"></i><i style="width:36%"></i></div>
+        <div class="ly l1"><b class="tg">Структура</b><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="ly l2"><b class="tg">Дизайн</b></div>
+        <div class="ly l3"><b class="tg">Контент</b><i></i><i></i><i></i><u></u></div>
+        <div class="ly l4"><div class="bar"><s></s><s></s><s></s></div><h4>Ваш сайт<br>уже работает</h4><em>Оставить заявку</em></div>
+      </div>
+    </div>
+    <div class="hint" id="hint">Тяните модель, чтобы повернуть</div>
+  </div>
+</div>
+
+<section class="s" id="chat">
+  <h2>Напишите, что нужно сделать</h2>
+  <p class="sub">Опишите задачу своими словами. Разработчик посмотрит заявку и ответит в течение 24 часов: обсудит детали и назовёт цену. Платить сейчас ничего не нужно.</p>
+  <div class="chat"><div class="lock" id="lock"><b>Чтобы написать разработчику, зарегистрируйтесь или войдите</b><span>Это займёт меньше минуты: имя, почта и пароль.</span><div><button class="btn" data-auth="reg">Зарегистрироваться</button><button class="btn ghost" data-auth="login">Войти</button></div></div>
+    <div class="chead"><span class="av">А</span><div><b>@andrewdikstiservices</b><small>Отвечаем в течение 24 часов</small></div><button type="button" class="btn ghost" id="out" hidden style="margin-left:auto;padding:7px 16px;font-size:14px">Выйти</button></div>
+    <div class="msgs" id="msgs" role="log" aria-live="polite"></div>
+    <div class="chips" id="chips"><button type="button">Лендинг</button><button type="button">Сайт компании</button><button type="button">Интернет-магазин</button><button type="button">Другое</button></div>
+    <form class="cform" id="cform" novalidate><input id="cin" maxlength="1000" aria-label="Ваше сообщение" placeholder="Напишите сообщение…" autocomplete="off"><button class="btn">Отправить</button></form>
+  </div>
+</section>
+
+<section class="s" id="status">
+  <div class="track">
+    <div>
+      <h2>Вы всегда видите, что с вашим заказом</h2>
+      <p class="sub" style="margin-bottom:0">Мы показываем понятную линию статуса вашего заказа. Никаких «ждите, мы работаем»: вы знаете, что происходит прямо сейчас.</p>
+    </div>
+    <div class="order" id="order">
+      <div class="ohead"><b id="otitle">Пример заказа</b><span class="live" id="obadge"></span></div>
+      <div class="pbar"><i id="pfill"></i><em id="ppct">0%</em></div>
+      
+      <ol class="steps" id="steps">
+        <li><i class="dot">1</i><div><b>Заявка в очереди</b><span>Получаем заказ и резервируем место.</span></div></li>
+        <li><i class="dot">2</i><div><b>Заявка изучена</b><span>Изучаем задачу и уточняем детали.</span></div></li>
+        <li><i class="dot">3</i><div><b>Работа над сайтом началась</b><span>Разрабатываем структуру, дизайн и функциональность.</span></div></li>
+        <li><i class="dot">4</i><div><b>Тестирование и окончание работы</b><span>Проверяем сайт и заканчиваем работу.</span></div></li>
+        <li class="fin"><i class="dot">★</i><div><b>Сайт готов</b><span>Передаём готовый сайт и отправляем ссылку вам на почту.</span></div></li>
+      </ol>
+      <p class="pnote" id="pnote"></p>
+      <button class="btn ghost again" id="again">Показать ещё раз</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span id="copy">© 2026 @andrewdikstiservices. Сайты под ключ.</span><a href="mailto:diksti6@gmail.com" style="text-decoration:none">diksti6@gmail.com</a></footer>
+
+<dialog id="auth" aria-labelledby="auth-title">
+  <button class="x" type="button" aria-label="Закрыть" id="close">×</button>
+  <div class="dlg">
+    <div class="auth-mark" aria-hidden="true">А</div>
+    <h3 class="auth-title" id="auth-title">С возвращением!</h3>
+    <div class="tabs" role="tablist" aria-label="Вход или регистрация"><button type="button" role="tab" id="t-login" aria-selected="true" aria-controls="f-login">Вход</button><button type="button" role="tab" id="t-reg" aria-selected="false" aria-controls="f-reg">Регистрация</button></div>
+    <form id="f-login" novalidate>
+      <label>Электронная почта<input type="email" maxlength="120" name="email" placeholder="name@example.com" required autocomplete="email"></label>
+      <label>Пароль<input type="password" maxlength="128" name="pass" placeholder="Введите пароль" required minlength="6" autocomplete="current-password"></label>
+      <div class="err" role="alert"></div><button class="btn big auth-submit">Войти</button>
+    </form>
+    <form id="f-reg" novalidate hidden>
+      <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <label>Как к вам обращаться?<input name="name" maxlength="60" placeholder="Ваше имя" required autocomplete="name"></label>
+      <label>Электронная почта<input type="email" maxlength="120" name="email" placeholder="name@example.com" required autocomplete="email"></label>
+      <label>Пароль<input type="password" maxlength="128" name="pass" placeholder="Не менее 6 символов" required minlength="6" autocomplete="new-password"></label>
+      <div class="err" role="alert"></div><button class="btn big auth-submit">Создать аккаунт</button>
+    </form>
+    <p class="auth-foot" id="auth-foot">Аккаунт сохраняется в этом браузере на вашем устройстве.</p>
+    <div class="ok" id="ok" hidden><div class="big">🎉</div><h3 id="ok-t"></h3><p class="sub" id="ok-p" style="margin:10px auto 0"></p></div>
+  </div>
+</dialog>
+
+
+<dialog id="adm" aria-label="Панель администратора">
+  <button class="x" type="button" aria-label="Закрыть" id="adm-x">×</button>
+  <div class="dlg">
+    <form id="adm-login" novalidate>
+      <h3 class="auth-title">Вход для администратора</h3>
+      <label>Почта администратора<input type="email" maxlength="120" id="adm-em" autocomplete="username" placeholder="name@example.com"></label>
+      <label>Пароль<input type="password" maxlength="128" id="adm-pw" autocomplete="current-password" placeholder="Введите пароль"></label>
+      <div class="err" id="adm-err" role="alert"></div><button class="btn big auth-submit">Войти</button>
+    </form>
+    <div id="adm-panel" hidden>
+      <div class="adm-h"><h3>Админ-панель</h3><button type="button" class="btn ghost" id="adm-out" style="padding:7px 16px;font-size:14px">Выйти</button></div>
+      <div class="tabs" id="adm-tabs" style="grid-template-columns:repeat(3,1fr)"><button type="button" data-tab="req" aria-selected="true">Заявки</button><button type="button" data-tab="usr" aria-selected="false">Пользователи</button><button type="button" data-tab="msg" aria-selected="false">Сообщения</button></div>
+      <div id="adm-list"></div>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  var stage=$('.stage'),scene=$('.scene'),stack=$('.stack'),layers=$$('.ly'),caps=$$('.cap'),hint=$('#hint');
+  var yaw=0,pit=0,vy=0,drag=null,cur=0,tgt=0,raf=0,vis=true,ay=0,auto=false,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)))}
+  function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+  function read(){var r=stage.getBoundingClientRect();vis=r.bottom>0&&r.top<innerHeight;kick()}
+  function kick(){if(!raf)raf=requestAnimationFrame(tick)}
+  function tick(){raf=0;var now=performance.now();auto=!reduce&&vis;if(auto){var u=(now%24000)/24000,q=u<.6?u/.6:u<.75?1:1-(u-.75)/.25;tgt=q*q*(3-2*q)}else tgt=reduce?.5:0;ay+=((auto?12*Math.sin(now/4200):0)-ay)*.06;cur+=(tgt-cur)*(reduce?1:.12);if(Math.abs(tgt-cur)<.0004)cur=tgt;
+    if(!drag){if(Math.abs(vy)>.03){yaw+=vy;vy*=.94}else vy=0;
+      if(cur>.78){yaw*=.88;pit*=.88;if(Math.abs(yaw)<.05)yaw=0;if(Math.abs(pit)<.05)pit=0}}
+    draw(cur);if(cur!==tgt||drag||vy||auto||Math.abs(ay)>.05||(cur>.78&&(yaw||pit)))kick()}
+  function draw(p){
+    var ex=ease(seg(p,.08,.45))*(1-ease(seg(p,.76,.95))),fin=ease(seg(p,.78,1));
+    var narrow=innerWidth<860,gap=narrow?46:72;
+    var rx=Math.min(85,Math.max(20,62+pit))*(1-fin),rz=(-38+46*seg(p,.08,.7)+yaw+ay)*(1-fin),sc=(narrow?.95:1.05)+.3*fin;
+    stack.style.transform='rotateX('+rx+'deg) rotateZ('+rz+'deg) scale('+sc+')';
+    var idx=Math.min(4,Math.floor(seg(p,.1,.76)*5)),done=p>.86;
+    layers.forEach(function(l,i){
+      l.style.transform='translateZ('+((i-2)*gap*ex+i*1.2)+'px)';
+      l.style.opacity=(ex<.08||done||i===idx)?1:.45;
+    });
+    var c=done?5:(p<.08?0:idx);
+    caps.forEach(function(e,i){e.classList.toggle('on',i===c)});
+    hint.style.opacity=(drag||yaw)?0:1;
+  }
+  addEventListener('scroll',read,{passive:true});addEventListener('resize',read);read();
+  scene.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY};vy=0;try{scene.setPointerCapture(e.pointerId)}catch(_){}scene.classList.add('grab');kick()});
+  scene.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;yaw+=dx*.6;vy=dx*.6;pit=Math.max(-42,Math.min(23,pit+dy*.3));kick()});
+  function drop(){drag=null;scene.classList.remove('grab');kick()}
+  scene.addEventListener('pointerup',drop);scene.addEventListener('pointercancel',drop);
+
+
+
+  /* auth */
+  var dlg=$('#auth'),fl=$('#f-login'),fr=$('#f-reg'),ok=$('#ok'),tl=$('#t-login'),tr=$('#t-reg');
+  function mode(m){var reg=m==='reg';fl.hidden=reg;fr.hidden=!reg;ok.hidden=true;$('.tabs').hidden=false;$('#auth-title').hidden=false;$('#auth-foot').hidden=false;tl.setAttribute('aria-selected',!reg);tr.setAttribute('aria-selected',reg);$('#auth-title').textContent=reg?'Создайте аккаунт':'С возвращением!';$('#auth-foot').textContent=reg?'После регистрации вы сможете отправить сообщение через чат.':'Аккаунт сохраняется в этом браузере на вашем устройстве.';$$('.err').forEach(function(e){e.textContent=''})}
+  function open(m){mode(m);if(!dlg.open)dlg.showModal()}
+  $$('[data-auth]').forEach(function(b){b.onclick=function(){open(b.dataset.auth)}});
+  tl.onclick=function(){mode('login')};tr.onclick=function(){mode('reg')};
+  $('#close').onclick=function(){dlg.close()};
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  
+})();
+</script>
+<script>
+(function(){
+  var MAIL='diksti6@gmail.com',box=document.getElementById('msgs'),f=document.getElementById('cform'),inp=document.getElementById('cin'),chips=document.getElementById('chips');
+  var qs=['Здравствуйте! Какую услугу или сайт вам нужно сделать?','Расскажите подробнее: для чего сайт, какие нужны страницы, есть ли примеры, которые нравятся. Можно указать сроки и бюджет.','Как к вам обращаться?','Укажите ваш юзернейм в Telegram (например, @username), чтобы мы могли уточнить детали.'];
+  var ks=['Услуга','Подробности','Имя','Telegram'],ans=[],i=0,done=false,user=null;
+  function add(t,me){var d=document.createElement('div');d.className='m '+(me?'me':'bot');d.textContent=t;box.appendChild(d);box.scrollTop=box.scrollHeight;return d}
+  function finish(){
+    done=true;inp.disabled=true;inp.placeholder='Заявка отправлена';
+    var body=ks.map(function(k,n){return k+': '+ans[n]}).join('\n');
+    var href='mailto:'+MAIL+'?subject='+encodeURIComponent('Заявка из чата: '+ans[0])+'&body='+encodeURIComponent(body);
+    var m=typing();
+    window.sloySave(ans,user).then(function(ok){
+      setTimeout(function(){
+        m.classList.remove('typing');m.textContent='Спасибо, '+ans[2]+'! Заявка принята. Текущий этап заказа смотрите в разделе «Статус заказа»: он обновляется автоматически. Ответим в течение 24 часов.';
+        if(!ok){var a=document.createElement('a');a.className='btn';a.href=href;a.textContent='Отправить на почту вручную';m.appendChild(document.createElement('br'));m.appendChild(a)}
+        box.scrollTop=box.scrollHeight;
+      },700);
+    });
+  }
+  function typing(){var d=document.createElement('div');d.className='m bot typing';d.innerHTML='<s></s><s></s><s></s>';box.appendChild(d);box.scrollTop=box.scrollHeight;return d}
+  var lastT=0;
+  function clean(s,n){return String(s).replace(/[\u0000-\u001f\u007f<>`]/g,' ').replace(/\s+/g,' ').trim().slice(0,n)}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();var t=clean(inp.value,1000);if(!t||done||!user)return;
+    if(Date.now()-lastT<800)return;lastT=Date.now();
+    if(i===3){
+      var u=t.replace(/^https?:\/\/t\.me\//i,'').replace(/^@/,'');
+      if(!/^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(u)){add(t,true);inp.value='';setTimeout(function(){add('Юзернейм должен быть вида @username: 5–32 символа, латиница, цифры и «_». Попробуйте ещё раз.')},400);return}
+      t='@'+u;
+    }
+    add(t,true);if(window.sloyLog)window.sloyLog(user,t);
+    ans[i]=t;inp.value='';chips.hidden=true;i++;while(i===2){ans[i]=user.name;i++}
+    if(i<qs.length){var tp=typing(),q=qs[i];setTimeout(function(){tp.remove();add(q)},900)}else finish();
+  });
+  chips.addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){inp.value=e.target.textContent;f.requestSubmit()}});
+  window.sloyUser=function(u){user=u};setTimeout(function(){add(qs[0])},300);
+})();
+</script>
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,updateProfile} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import {getFirestore,collection,doc,setDoc,addDoc,updateDoc,deleteDoc,onSnapshot,query,where,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+
+/* ===== НАСТРОЙКИ FIREBASE: вставьте свои значения ===== */
+const CFG={
+  apiKey:'AIzaSyA4xlcDdrixLDFVc5Z30VqQxylQhUTFLOw',
+  authDomain:'my-site-24c9b.firebaseapp.com',
+  projectId:'my-site-24c9b',
+  appId:'1:16951450072:web:03f1fa7254114087057aad'
+};
+const ADMIN_UID='OFuT8yZNrzcK58xREIFYvZz6qhA3';
+/* ====================================================== */
+
+const $=i=>document.getElementById(i);
+const NAMES=['Заявка в очереди','Заявка изучена','Работа над сайтом началась','Тестирование и окончание работы','Сайт готов'];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const ready=!/ВСТАВЬТЕ/.test(CFG.apiKey+CFG.appId);
+let auth,db;
+if(ready){const app=initializeApp(CFG);auth=getAuth(app);db=getFirestore(app)}
+const mailRe=/^\S+@\S+\.\S+$/,mailErr='Проверьте эл. почту: нужен адрес вида name@mail.ru.';
+const clean=(s,n)=>String(s==null?'':s).replace(/[\u0000-\u001f\u007f<>`]/g,' ').replace(/\s+/g,' ').trim().slice(0,n);
+const esc=s=>String(s==null?'':s).replace(/[&<>"'`]/g,c=>'&#'+c.charCodeAt(0)+';');
+const ms=x=>x&&x.toMillis?x.toMillis():Date.now();
+const dt=x=>x&&x.toDate?x.toDate().toLocaleString('ru-RU'):'только что';
+function errMsg(x){
+  const c=(x&&x.code)||'';
+  if(!ready)return 'Firebase не настроен: вставьте apiKey и appId в код.';
+  if(/invalid-credential|wrong-password|user-not-found|invalid-login/.test(c))return 'Неверная почта или пароль.';
+  if(c==='auth/email-already-in-use')return 'Этот адрес уже зарегистрирован. Перейдите на вкладку «Вход».';
+  if(c==='auth/too-many-requests')return 'Слишком много попыток. Подождите несколько минут.';
+  if(c==='auth/weak-password')return 'Пароль слишком простой.';
+  if(c==='auth/network-request-failed')return 'Нет соединения с сервером.';
+  return 'Что-то пошло не так. Попробуйте ещё раз.';
+}
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('section.s h2,section.s .sub,.chat,.order').forEach(el=>{el.classList.add('rv');reduce?el.classList.add('in'):io.observe(el)});
+
+/* ---------- клиент ---------- */
+const lock=$('lock'),out=$('out'),dlg=$('auth'),f1=$('f-login'),f2=$('f-reg'),ok=$('ok'),cin=$('cin');
+const parts=[...document.querySelectorAll('.chead,.msgs,.chips,.cform')];
+const setInert=v=>parts.forEach(x=>x.inert=v);setInert(true);
+let cur=null,myOrd=null,unsubOrd=null;
+
+function enter(u){cur=u;window.sloyUser(u);lock.hidden=true;out.hidden=false;setInert(false)}
+function done(u,reg){
+  enter(u);f1.hidden=f2.hidden=true;$('auth-title').hidden=true;document.querySelector('.tabs').hidden=true;$('auth-foot').hidden=true;ok.hidden=false;
+  $('ok-t').textContent=(reg?'Добро пожаловать, ':'С возвращением, ')+u.name+'!';
+  $('ok-p').textContent='Теперь вы можете написать разработчику в чате.';
+  setTimeout(()=>{dlg.close();$('chat').scrollIntoView({behavior:'smooth'});cin.focus({preventScroll:true})},1100);
+}
+f2.addEventListener('submit',async e=>{
+  e.preventDefault();const d=new FormData(f2),er=f2.querySelector('.err');
+  if(d.get('website'))return;
+  const name=clean(d.get('name'),60),em=String(d.get('email')).trim().toLowerCase(),pw=String(d.get('pass'));
+  if(!name){er.textContent='Введите имя.';return}
+  if(!mailRe.test(em)||em.length>120){er.textContent=mailErr;return}
+  if(pw.length<6||pw.length>128){er.textContent='Пароль: от 6 до 128 символов.';return}
+  if(!ready){er.textContent=errMsg();return}
+  try{
+    const cr=await createUserWithEmailAndPassword(auth,em,pw);
+    await updateProfile(cr.user,{displayName:name});
+    await setDoc(doc(db,'users',cr.user.uid),{name,email:em,created:serverTimestamp()});
+    done({name,email:em,uid:cr.user.uid},true);
+  }catch(x){er.textContent=errMsg(x)}
+});
+f1.addEventListener('submit',async e=>{
+  e.preventDefault();const d=new FormData(f1),er=f1.querySelector('.err'),em=String(d.get('email')).trim().toLowerCase();
+  if(!mailRe.test(em)||em.length>120){er.textContent=mailErr;return}
+  if(!ready){er.textContent=errMsg();return}
+  try{
+    const cr=await signInWithEmailAndPassword(auth,em,String(d.get('pass')));
+    if(cr.user.uid===ADMIN_UID){await signOut(auth);er.textContent='Неверная почта или пароль.';return}
+    done({name:cr.user.displayName||em.split('@')[0],email:em,uid:cr.user.uid},false);
+  }catch(x){er.textContent=errMsg(x)}
+});
+out.addEventListener('click',async()=>{try{await signOut(auth)}catch(e){}location.reload()});
+
+window.sloyLog=(user,text)=>{
+  if(!ready||!user.uid)return;
+  addDoc(collection(db,'messages'),{uid:user.uid,name:clean(user.name,60),email:user.email,text:clean(text,1000),date:serverTimestamp()}).catch(()=>{});
+};
+window.sloySave=async(ans,user)=>{
+  ans=ans.map(x=>clean(x,1000));
+  try{await addDoc(collection(db,'requests'),{uid:user.uid,name:clean(ans[2],60),email:user.email,service:ans[0],details:ans[1],telegram:ans[3],stage:0,date:serverTimestamp()})}catch(e){}
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/diksti6@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify({_subject:'Новая заявка: '+ans[0],'Услуга':ans[0],'Подробности':ans[1],'Имя':ans[2],'Telegram':ans[3],'Почта аккаунта':user.email,_honey:''})});
+    return r.ok;
+  }catch(e){return false}
+};
+
+/* ---------- статус заказа ---------- */
+const steps=[...document.querySelectorAll('#steps li')],box=$('steps'),badge=$('obadge'),fill=$('pfill'),pct=$('ppct'),note=$('pnote'),again=$('again'),title=$('otitle');
+let mode='',curK=0,timer=0,played=false,lastStage=-1;
+function paint(k){
+  const n=steps.length,fin=k>=n;curK=k;
+  steps.forEach((li,i)=>{li.classList.toggle('done',i<k);li.classList.toggle('act',i===k&&!fin)});
+  box.style.setProperty('--f',Math.min(1,k/(n-1)));
+  badge.textContent=fin?'Заказ завершён':'Сейчас: '+NAMES[k];badge.classList.toggle('fin',fin);
+  const p=fin?100:Math.round((k+.5)/n*100);fill.style.width=p+'%';pct.textContent=p+'%';
+}
+function walk(t,msec){
+  clearInterval(timer);
+  if(reduce||curK===t){paint(t);return}
+  timer=setInterval(()=>{curK+=curK<t?1:-1;paint(curK);if(curK===t)clearInterval(timer)},msec);
+}
+function demo(){clearInterval(timer);paint(0);if(reduce){paint(steps.length);return}
+  timer=setInterval(()=>{paint(curK+1);if(curK>=steps.length)clearInterval(timer)},1700)}
+again.onclick=()=>{if(mode==='demo')demo()};
+new IntersectionObserver(e=>{if(e[0].isIntersecting&&!played){played=true;if(mode==='demo')demo()}},{threshold:.5}).observe($('order'));
+function refresh(){
+  const o=myOrd;
+  if(o){
+    const target=o.stage>=4?5:o.stage;
+    if(mode!=='live'){mode='live';title.textContent='Ваш заказ';again.hidden=true;paint(0);lastStage=-1}
+    if(lastStage!==o.stage){lastStage=o.stage;walk(target,800)}
+    note.textContent='Статус обновляется автоматически. Заявка: '+o.service;
+  }else{
+    const txt=cur?'Отправьте заявку в чате, и здесь появится реальный статус вашего заказа.':'Войдите и отправьте заявку, чтобы видеть здесь реальный статус своего заказа.';
+    if(mode!=='demo'){mode='demo';title.textContent='Пример заказа';again.hidden=false;lastStage=-1;played?demo():paint(0)}
+    note.textContent=txt;
+  }
+}
+refresh();
+
+/* ---------- админ ---------- */
+const adm=$('adm'),fa=$('adm-login'),panel=$('adm-panel'),list=$('adm-list'),aerr=$('adm-err');
+let isAdm=false,tab='req',reqs=[],msgs=[],users=[],unsubs=[];
+const tg=c=>{const m=/^@([A-Za-z][A-Za-z0-9_]{4,31})$/.exec(c||'');return m?'<a href="https://t.me/'+m[1]+'" target="_blank" rel="noopener noreferrer">'+esc(c)+'</a>':esc(c)};
+function render(){
+  if(!adm.open||!isAdm)return;
+  document.querySelectorAll('#adm-tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===tab));
+  let h='';
+  if(tab==='req'){
+    h=reqs.map(r=>'<div class="rq" data-id="'+esc(r.id)+'"><div class="rq-t"><span>'+esc(r.name)+' · '+esc(r.service)+'</span><small>'+dt(r.date)+'</small></div>'
+      +'<p>'+esc(r.details)+'</p><p>Аккаунт: '+esc(r.email)+' · Telegram: '+tg(r.telegram)+'</p>'
+      +'<div class="rq-b"><select aria-label="Этап заказа">'+NAMES.map((n,i)=>'<option value="'+i+'"'+(r.stage===i?' selected':'')+'>'+(i+1)+'. '+n+'</option>').join('')+'</select>'
+      +'<button type="button" class="btn ghost del" style="padding:9px 16px;font-size:14px">Удалить</button></div></div>').join('')||'<div class="adm-empty">Заявок пока нет.</div>';
+  }else if(tab==='usr'){
+    h=users.map(u=>'<div class="rq"><div class="rq-t"><span>'+esc(u.name)+'</span><small>'+dt(u.created)+'</small></div><p>'+esc(u.email)+'<br>Заявок: '+reqs.filter(r=>r.uid===u.id).length+' · Сообщений: '+msgs.filter(m=>m.uid===u.id).length+'</p></div>').join('')||'<div class="adm-empty">Пользователей пока нет.</div>';
+  }else{
+    h=msgs.map(m=>'<div class="rq"><div class="rq-t"><span>'+esc(m.name)+' · '+esc(m.email)+'</span><small>'+dt(m.date)+'</small></div><p>'+esc(m.text)+'</p></div>').join('')||'<div class="adm-empty">Сообщений пока нет.</div>';
+  }
+  list.innerHTML=h;
+}
+function sub(name,key,store){
+  return onSnapshot(collection(db,name),s=>{store(s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>ms(b[key])-ms(a[key])));render()},()=>{});
+}
+function adminOn(){isAdm=true;unsubs.forEach(u=>u());unsubs=[sub('requests','date',v=>reqs=v),sub('messages','date',v=>msgs=v),sub('users','created',v=>users=v)];}
+function adminOff(){isAdm=false;unsubs.forEach(u=>u());unsubs=[];reqs=msgs=users=[]}
+function show(){fa.hidden=isAdm;panel.hidden=!isAdm;if(!adm.open)adm.showModal();render()}
+
+fa.addEventListener('submit',async e=>{
+  e.preventDefault();aerr.textContent='';
+  const em=String($('adm-em').value).trim().toLowerCase(),pw=$('adm-pw').value;
+  if(!ready){aerr.textContent=errMsg();return}
+  try{
+    const cr=await signInWithEmailAndPassword(auth,em,pw);
+    if(cr.user.uid!==ADMIN_UID){await signOut(auth);aerr.textContent='Нет доступа.';return}
+    $('adm-pw').value='';adminOn();show();
+  }catch(x){aerr.textContent=errMsg(x)}
+});
+$('adm-tabs').addEventListener('click',e=>{if(e.target.dataset.tab){tab=e.target.dataset.tab;render()}});
+list.addEventListener('change',async e=>{
+  if(e.target.tagName!=='SELECT')return;
+  try{await updateDoc(doc(db,'requests',e.target.closest('.rq').dataset.id),{stage:+e.target.value})}catch(x){alert('Не удалось сохранить этап.')}
+});
+list.addEventListener('click',async e=>{
+  if(!e.target.classList.contains('del')||!confirm('Удалить заявку?'))return;
+  try{await deleteDoc(doc(db,'requests',e.target.closest('.rq').dataset.id))}catch(x){alert('Не удалось удалить.')}
+});
+$('adm-out').onclick=async()=>{try{await signOut(auth)}catch(e){}adminOff();adm.close();if(location.hash==='#admin')history.replaceState(null,'',location.pathname)};
+$('adm-x').onclick=()=>adm.close();
+adm.addEventListener('click',e=>{if(e.target===adm)adm.close()});
+adm.addEventListener('close',()=>{if(location.hash==='#admin')history.replaceState(null,'',location.pathname)});
+const chk=()=>{if(location.hash==='#admin')show()};
+addEventListener('hashchange',chk);
+
+/* ---------- состояние входа ---------- */
+if(ready)onAuthStateChanged(auth,u=>{
+  if(unsubOrd){unsubOrd();unsubOrd=null}
+  if(!u){cur=null;myOrd=null;adminOff();refresh();chk();return}
+  if(u.uid===ADMIN_UID){cur=null;myOrd=null;adminOn();refresh();chk();return}
+  adminOff();
+  enter({name:u.displayName||u.email.split('@')[0],email:u.email,uid:u.uid});
+  unsubOrd=onSnapshot(query(collection(db,'requests'),where('uid','==',u.uid)),s=>{
+    const a=s.docs.map(d=>d.data()).sort((x,y)=>ms(x.date)-ms(y.date));
+    myOrd=a.length?a[a.length-1]:null;refresh();
+  },()=>{});
+});else chk();
+</script>
+</body>
+</html>
